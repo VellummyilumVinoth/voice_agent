@@ -1,0 +1,9 @@
+[package]
+org = "vinoth"
+name = "voice_agent_integration"
+version = "0.1.0"
+distribution = "2201.14.1"
+title = "Voice Agent Integration"
+
+[build-options]
+sticky = true
