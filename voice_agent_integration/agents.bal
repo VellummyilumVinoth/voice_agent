@@ -1,15 +1,5 @@
 import ballerina/ai;
 
-// final ai:Agent customerSupportAgent = check new (
-//     systemPrompt = {
-//         role: string `Customer Support Assistant`,
-//         instructions: string `You are a friendly customer support assistant for an online store.
-// Help customers check their order status, understand the return policy, and raise support tickets.
-// Always use the provided tools to look up orders and create tickets. Never guess order details.
-// Keep every reply short and conversational: one or two sentences, with no Markdown, lists, or code.`
-//     }, memory = aiShorttermmemory, model = supportModel, tools = [getOrderStatus, getReturnPolicy, createSupportTicket]
-// );
-
 # Gets the current status of an order.
 #
 # + orderId - The order ID, for example ORD-1001
@@ -51,5 +41,5 @@ final ai:Agent customerSupportAgent = check new (
 Help customers check their order status, understand the return policy, and raise support tickets.
 Always use the provided tools to look up orders and create tickets. Never guess order details.
 Keep every reply short and conversational: one or two sentences, with no Markdown, lists, or code.`
-    }, model = supportModel
+    }, memory = aiShorttermmemory, model = supportModel, tools = [getOrderStatus, getReturnPolicy, createSupportTicket]
 );
